@@ -22,8 +22,13 @@ class MovieController extends Controller
 		//$this->beforeFilter('@find',['only' => ['edit','update','destroy']]);
     }
     public function find(Route $route){
-        //adminitido hasta la version 5.1.* de laravel
-		//$this->movie = Movie::find($route->getParameter('pelicula'));
+        /*
+		//adminitido hasta la version 5.1.* de laravel
+		$this->movie = Movie::find($route->getParameter('pelicula'));
+		if(! $this->movie ){
+			abort(404);
+		}
+		*/
     }
 	
 	/**
@@ -84,6 +89,7 @@ class MovieController extends Controller
     public function edit($id)
     {
         $movie = Movie::find($id);
+		$this->notFound($movie);
 		$genres = Genre::lists('genre', 'id');
         return view('pelicula.edit',['movie'=>$movie,'genres'=>$genres]);
 		//admitido hasta la version 5.1.* de laravel

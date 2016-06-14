@@ -42,6 +42,12 @@ Route::resource('log','LogController');
 Route::get('logout','LogController@logout');
 
 
+// direcciona a todos los metodos por defecto del controlador StateController para los selects dinamicos 
+Route::resource('states','StateController');
+// direcciona al metodo getTowns del controlador StateController para los selects dinamicos 
+Route::get('towns/{id}','StateController@getTowns');
+
+
 
 //OTRAS RUTAS
 
