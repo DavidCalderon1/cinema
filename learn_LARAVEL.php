@@ -1,6 +1,6 @@
 <?php
 	// introduccion
-	//¿ que es Laravel?
+	//¿ que es Laravel??
 	- laravel es un framework de php que trabaj con MVC (Modelo Vista Controlador)
 	- tiene una gran influencia de framework como Ruby on Rails y ASP.NET
 	
